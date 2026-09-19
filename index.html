@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Upcoming Events | ടീൻ സ്പേസ് & വിദ്യാർത്ഥിനി സമ്മേളനം</title>
+  
+  <!-- Meta for Social Sharing -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="description" content="ടീൻ സ്പേസ് 2026 ഒക്ടോബർ 18 ഗുരുവായൂർ | തൃശൂർ ജില്ലാ വിദ്യാർത്ഥിനി സമ്മേളനം 2026 നവംബർ 15">
+
+  <!-- Google Fonts for Malayalam & English -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome for crisp mobile icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background decorative glows -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <!-- Mobile App Container -->
+  <main class="app-container">
+    
+    <!-- Top Header Bar -->
+    <header class="top-header">
+      <div class="header-pill">
+        <span class="live-dot"></span> വരാനിരിക്കുന്ന പ്രധാന പരിപാടികൾ
+      </div>
+      <h1 class="main-title">യുവാക്കൾക്കായി രണ്ട് വൻ സംഗമങ്ങൾ</h1>
+      <p class="sub-lead">തീയതികൾ ഇപ്പോൾ തന്നെ കലണ്ടറിൽ കുറിച്ചുവെക്കൂ!</p>
+    </header>
+
+    <!-- Filter Pills / Tabs for Mobile Navigation -->
+    <nav class="filter-tabs" aria-label="Event Filter">
+      <button class="tab-btn active" data-filter="all">
+        <i class="fa-solid fa-layer-group"></i> എല്ലാം (All)
+      </button>
+      <button class="tab-btn" data-filter="boys">
+        <i class="fa-solid fa-mars"></i> ടീൻ സ്പേസ് (Boys)
+      </button>
+      <button class="tab-btn" data-filter="girls">
+        <i class="fa-solid fa-venus"></i> വിദ്യാർത്ഥിനി സമ്മേളനം (Girls)
+      </button>
+    </nav>
+
+    <!-- Cards Stream -->
+    <section class="cards-stream">
+
+      <!-- ================= CARD 1: TEEN SPACE (BOYS) ================= -->
+      <article class="event-card boys-theme" data-category="boys" id="card-teenspace">
+        <div class="card-glow"></div>
+        
+        <!-- Header Ribbon / Target Audience -->
+        <div class="card-top-meta">
+          <span class="audience-badge boys-badge">
+            <i class="fa-solid fa-mars"></i> ബോയ്സിന് മാത്രം (Boys Only) | 10th, +1, +2
+          </span>
+          <span class="event-type-badge">BOYS ONLY</span>
+        </div>
+
+        <!-- Event Official Logo -->
+        <div class="logo-box">
+          <img src="teenspace-logo.png" alt="teenspace logo" class="event-logo-img">
+        </div>
+
+        <div class="card-title-group">
+          <div class="event-hero-tag">സവിശേഷ സംഗമം</div>
+          <h2 class="card-title">ടീൻ സ്പേസ് '26</h2>
+          <p class="card-tagline">TEEN SPACE • പുതിയ ചിന്തകൾ, പുതിയ സൗഹൃദങ്ങൾ</p>
+        </div>
+
+        <p class="card-desc">
+          പത്താം ക്ലാസ്, പ്ലസ് വൺ, പ്ലസ് ടു പഠിക്കുന്ന ആൺകുട്ടികൾക്കായി (Boys Only) ഒരുക്കുന്ന സവിശേഷമായ പ്രചോദന സംഗമം.
+        </p>
+
+        <!-- Date & Venue Details Grid -->
+        <div class="details-box">
+          <div class="detail-item">
+            <div class="icon-wrap boys-icon">
+              <i class="fa-regular fa-calendar-check"></i>
+            </div>
+            <div class="detail-text">
+              <span class="label">തീയതി & ദിവസം</span>
+              <strong class="value">2026 ഒക്ടോബർ 18, ഞായർ</strong>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="icon-wrap boys-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="detail-text">
+              <span class="label">വേദി & സ്ഥലം</span>
+              <strong class="value">ഡ്രീം പാലസ്, പരവൂർ, ഗുരുവായൂർ</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-section">
+          <div class="countdown-header">
+            <i class="fa-regular fa-clock"></i> ഇനിയുള്ള കാത്തിരിപ്പ്:
+          </div>
+          <div class="countdown-grid" id="countdown-boys" data-target="2026-10-18T09:00:00+05:30">
+            <div class="time-box">
+              <span class="time-num days">00</span>
+              <span class="time-label">ദിവസം</span>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-box">
+              <span class="time-num hours">00</span>
+              <span class="time-label">മണിക്കൂർ</span>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-box">
+              <span class="time-num minutes">00</span>
+              <span class="time-label">മിനിറ്റ്</span>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-box">
+              <span class="time-num seconds">00</span>
+              <span class="time-label">സെക്കൻഡ്</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="card-actions">
+          <a href="#" class="btn btn-boys btn-primary" onclick="shareOnWhatsApp('boys'); return false;">
+            <i class="fa-brands fa-whatsapp"></i> വാട്സാപ്പിൽ പങ്കിടാം
+          </a>
+          <div class="btn-group-dual">
+            <a href="https://maps.google.com/?q=Dream+Palace+Auditorium+Guruvayoor" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-solid fa-map-location-dot"></i> ലൊക്കേഷൻ
+            </a>
+            <a href="#" class="btn btn-secondary" onclick="addToCalendar('boys'); return false;">
+              <i class="fa-solid fa-calendar-plus"></i> കലണ്ടർ
+            </a>
+          </div>
+        </div>
+      </article>
+
+
+      <!-- ================= CARD 2: VIDYARTHINI SAMMELANAM (GIRLS) ================= -->
+      <article class="event-card girls-theme" data-category="girls" id="card-girls">
+        <div class="card-glow"></div>
+
+        <!-- Header Ribbon / Target Audience -->
+        <div class="card-top-meta">
+          <span class="audience-badge girls-badge">
+            <i class="fa-solid fa-venus"></i> 7-ാം ക്ലാസ് മുതൽ പി.ജി. വരെ | Girls Only
+          </span>
+          <span class="event-type-badge">GIRLS ONLY</span>
+        </div>
+
+        <div class="card-title-group">
+          <div class="event-hero-tag girls-tag">വിദ്യാർത്ഥിനി മുന്നേറ്റം</div>
+          <h2 class="card-title">തൃശൂർ ജില്ലാ വിദ്യാർത്ഥിനി സമ്മേളനം</h2>
+          <p class="card-tagline">ശബ്ദമാവാൻ, ചിറകണിയാൻ പെൺകുട്ടികളുടെ കൂട്ടായ്മ</p>
+        </div>
+
+        <p class="card-desc">
+          7-ാം ക്ലാസ് മുതൽ പി.ജി. വരെയുള്ള പെൺകുട്ടികൾക്കായി (Class 7 to PG Girls Students) സംഘടിപ്പിക്കുന്ന വിപുലമായ ജില്ലാ സമ്മേളനം.
+        </p>
+
+        <!-- Date & Venue Details Grid -->
+        <div class="details-box">
+          <div class="detail-item">
+            <div class="icon-wrap girls-icon">
+              <i class="fa-regular fa-calendar-check"></i>
+            </div>
+            <div class="detail-text">
+              <span class="label">തീയതി & ദിവസം</span>
+              <strong class="value">2026 നവംബർ 15, ഞായർ</strong>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <div class="icon-wrap girls-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="detail-text">
+              <span class="label">വേദി & സ്ഥലം</span>
+              <strong class="value">തൃശൂർ നഗരം</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Countdown Timer -->
+        <div class="countdown-section">
+          <div class="countdown-header">
+            <i class="fa-regular fa-clock"></i> ഇനിയുള്ള കാത്തിരിപ്പ്:
+          </div>
+          <div class="countdown-grid" id="countdown-girls" data-target="2026-11-15T09:00:00+05:30">
+            <div class="time-box">
+              <span class="time-num days">00</span>
+              <span class="time-label">ദിവസം</span>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-box">
+              <span class="time-num hours">00</span>
+              <span class="time-label">മണിക്കൂർ</span>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-box">
+              <span class="time-num minutes">00</span>
+              <span class="time-label">മിനിറ്റ്</span>
+            </div>
+            <div class="time-sep">:</div>
+            <div class="time-box">
+              <span class="time-num seconds">00</span>
+              <span class="time-label">സെക്കൻഡ്</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="card-actions">
+          <a href="#" class="btn btn-girls btn-primary" onclick="shareOnWhatsApp('girls'); return false;">
+            <i class="fa-brands fa-whatsapp"></i> വാട്സാപ്പിൽ പങ്കിടാം
+          </a>
+          <div class="btn-group-dual">
+            <a href="https://maps.google.com/?q=Thrissur+Kerala" target="_blank" rel="noopener" class="btn btn-secondary">
+              <i class="fa-solid fa-map-location-dot"></i> ലൊക്കേഷൻ
+            </a>
+            <a href="#" class="btn btn-secondary" onclick="addToCalendar('girls'); return false;">
+              <i class="fa-solid fa-calendar-plus"></i> കലണ്ടർ
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Bottom Quick Share / Copy Link Panel -->
+    <footer class="app-footer">
+      <div class="footer-card">
+        <div class="footer-info">
+          <h4><i class="fa-solid fa-bullhorn"></i> ഈ വിവരം സുഹൃത്തുക്കളെ അറിയിക്കൂ!</h4>
+          <p>ഈ രണ്ട് പരിപാടികളുടെയും ലിങ്ക് കോപ്പി ചെയ്ത് ഗ്രൂപ്പുകളിലേക്ക് ഷെയർ ചെയ്യാം.</p>
+        </div>
+        <button class="btn-share-all" id="btnShareAll">
+          <i class="fa-solid fa-share-nodes"></i> ലിങ്ക് കോപ്പി ചെയ്യുക
+        </button>
+      </div>
+      <p class="copyright-note">© 2026 ഇവന്റ് പ്ലാറ്റ്ഫോം | All Rights Reserved</p>
+    </footer>
+
+  </main>
+
+  <!-- Notification Toast -->
+  <div id="toast" class="toast">ലിങ്ക് കോപ്പി ചെയ്തു!</div>
+
+  <!-- JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
