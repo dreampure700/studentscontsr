@@ -1,608 +1,159 @@
-/* ===================================================
-   MOBILE-FIRST EVENT PROMO STYLESHEET
-   Optimized for Smartphone Screens & Malayalam Typography
-   =================================================== */
-
-:root {
-  --bg-main: #0a0d14;
-  --bg-card: rgba(18, 24, 38, 0.85);
-  --border-color: rgba(255, 255, 255, 0.1);
-  --text-main: #f3f4f6;
-  --text-muted: #9ca3af;
-  --text-dim: #6b7280;
-
-  /* Boys / Teen Space Theme Colors (Vibrant Cyan & Indigo) */
-  --boys-primary: #00d2ff;
-  --boys-secondary: #3a7bd5;
-  --boys-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
-  --boys-glow: rgba(0, 210, 255, 0.25);
-  --boys-badge-bg: rgba(0, 210, 255, 0.15);
-  --boys-border: rgba(0, 210, 255, 0.35);
-
-  /* Girls / Vidyarthini Sammelanam Theme Colors (Rose & Magenta & Purple) */
-  --girls-primary: #ff416c;
-  --girls-secondary: #ff4b2b;
-  --girls-accent: #9b51e0;
-  --girls-gradient: linear-gradient(135deg, #ff416c 0%, #8a2be2 100%);
-  --girls-glow: rgba(255, 65, 108, 0.25);
-  --girls-badge-bg: rgba(255, 65, 108, 0.15);
-  --girls-border: rgba(255, 65, 108, 0.35);
-
-  --radius-lg: 24px;
-  --radius-md: 16px;
-  --radius-sm: 10px;
-  --radius-full: 9999px;
-  
-  --font-family: 'Noto Sans Malayalam', 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
 }
 
 body {
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  font-family: var(--font-family);
+  background: #000;
+  font-family: 'Noto Sans Malayalam', 'Manrope', sans-serif;
   min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
-  line-height: 1.55;
-  position: relative;
-  overflow-x: hidden;
-  padding: 16px 12px 40px 12px;
+  padding: 24px 16px;
+  -webkit-tap-highlight-color: transparent;
 }
 
-/* Background Atmospheric Glow Orbs */
-.glow-orb {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(100px);
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.35;
-}
-
-.orb-1 {
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, #3a7bd5, transparent 70%);
-  top: -80px;
-  left: -80px;
-}
-
-.orb-2 {
-  width: 340px;
-  height: 340px;
-  background: radial-gradient(circle, #ff416c, transparent 70%);
-  bottom: 50px;
-  right: -90px;
-}
-
-/* Smartphone Container (App like centered layout) */
-.app-container {
+.container {
   width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-/* Top Header */
-.top-header {
-  text-align: center;
-  padding: 14px 8px 6px 8px;
-}
-
-.header-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #e5e7eb;
-  margin-bottom: 12px;
-}
-
-.live-dot {
-  width: 8px;
-  height: 8px;
-  background-color: #10b981;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #10b981;
-  animation: pulse-dot 1.8s infinite;
-}
-
-@keyframes pulse-dot {
-  0% { transform: scale(0.9); opacity: 0.7; }
-  50% { transform: scale(1.3); opacity: 1; box-shadow: 0 0 14px #10b981; }
-  100% { transform: scale(0.9); opacity: 0.7; }
-}
-
-.main-title {
-  font-size: 1.55rem;
-  font-weight: 800;
-  line-height: 1.35;
-  background: linear-gradient(180deg, #ffffff 0%, #d1d5db 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 6px;
-  letter-spacing: -0.3px;
-}
-
-.sub-lead {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-}
-
-/* Filter Tabs / Navigation */
-.filter-tabs {
-  display: flex;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 5px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  gap: 4px;
-}
-
-.tab-btn {
-  flex: 1;
-  border: none;
-  background: transparent;
-  color: var(--text-muted);
-  font-family: var(--font-family);
-  font-size: 0.82rem;
-  font-weight: 600;
-  padding: 9px 8px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: all 0.25s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-
-.tab-btn.active {
-  background: #ffffff;
-  color: #0d1117;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
-}
-
-/* Cards Stream */
-.cards-stream {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/* Event Card Base */
-.event-card {
+/* ── Card Base ── */
+.card {
   position: relative;
-  background: var(--bg-card);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-radius: var(--radius-lg);
-  padding: 22px 18px;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: center;
   overflow: hidden;
-  transition: transform 0.3s ease, opacity 0.3s ease, border-color 0.3s ease;
+  animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: var(--delay);
 }
 
-.event-card.hidden {
-  display: none;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
-/* Theme specifics */
-.event-card.boys-theme {
-  border-top: 3px solid var(--boys-primary);
-  background: linear-gradient(170deg, rgba(0, 210, 255, 0.08) 0%, rgba(18, 24, 38, 0.95) 40%);
-}
-
-.event-card.girls-theme {
-  border-top: 3px solid var(--girls-primary);
-  background: linear-gradient(170deg, rgba(255, 65, 108, 0.08) 0%, rgba(18, 24, 38, 0.95) 40%);
-}
-
-/* Top Meta Row */
-.card-top-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 8px;
-}
-
-.audience-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-.boys-badge {
-  background: var(--boys-badge-bg);
-  color: var(--boys-primary);
-  border: 1px solid var(--boys-border);
-}
-
-.girls-badge {
-  background: var(--girls-badge-bg);
-  color: var(--girls-primary);
-  border: 1px solid var(--girls-border);
-}
-
-.event-type-badge {
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: var(--text-dim);
-  background: rgba(255, 255, 255, 0.05);
-  padding: 4px 8px;
-  border-radius: 6px;
-}
-
-/* Event Logo Styling */
-.logo-box {
-  background: #ffffff;
-  padding: 12px 20px;
-  border-radius: var(--radius-md);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25), 0 0 16px rgba(0, 210, 255, 0.25);
-  transition: transform 0.25s ease;
-}
-
-.logo-box:hover {
-  transform: translateY(-2px);
-}
-
-.event-logo-img {
+/* Shimmer sweep */
+.card-shimmer {
+  position: absolute;
+  top: 0;
+  left: -100%;
   width: 100%;
-  max-width: 220px;
-  height: auto;
-  max-height: 56px;
-  object-fit: contain;
-  display: block;
-}
-
-/* Title Section */
-.event-hero-tag {
-  font-size: 0.76rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--boys-primary);
-  margin-bottom: 2px;
-  display: inline-block;
-}
-
-.event-hero-tag.girls-tag {
-  color: var(--girls-primary);
-}
-
-.card-title {
-  font-size: 1.55rem;
-  font-weight: 800;
-  line-height: 1.25;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.card-tagline {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-muted);
-}
-
-.card-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #cbd5e1;
-}
-
-/* Details Box (Date & Venue) */
-.details-box {
-  background: rgba(0, 0, 0, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  border-radius: var(--radius-md);
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.detail-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.icon-wrap {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.15rem;
-  flex-shrink: 0;
-}
-
-.boys-icon {
-  background: rgba(0, 210, 255, 0.12);
-  color: var(--boys-primary);
-  border: 1px solid rgba(0, 210, 255, 0.25);
-}
-
-.girls-icon {
-  background: rgba(255, 65, 108, 0.12);
-  color: var(--girls-primary);
-  border: 1px solid rgba(255, 65, 108, 0.25);
-}
-
-.detail-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
-.detail-text .label {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text-dim);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.detail-text .value {
-  font-size: 0.96rem;
-  font-weight: 700;
-  color: #ffffff;
-  line-height: 1.4;
-}
-
-/* Countdown Section */
-.countdown-section {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: var(--radius-md);
-  padding: 12px 14px;
-}
-
-.countdown-header {
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--text-muted);
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.countdown-grid {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.time-box {
-  flex: 1;
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 8px 4px;
-}
-
-.time-num {
-  display: block;
-  font-family: 'Manrope', monospace, sans-serif;
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #ffffff;
-  line-height: 1;
-  letter-spacing: -0.5px;
-}
-
-.time-label {
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  margin-top: 4px;
-  display: block;
-}
-
-.time-sep {
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: var(--text-dim);
-  padding: 0 4px;
-}
-
-/* Action Buttons */
-.card-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 4px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-  font-family: var(--font-family);
-  font-size: 0.92rem;
-  font-weight: 700;
-  padding: 13px 18px;
-  border-radius: var(--radius-md);
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary {
-  color: #ffffff;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
-}
-
-.btn-boys {
-  background: var(--boys-gradient);
-  color: #071321;
-}
-
-.btn-boys:active {
-  transform: scale(0.98);
-  filter: brightness(0.9);
-}
-
-.btn-girls {
-  background: var(--girls-gradient);
-  color: #ffffff;
-}
-
-.btn-girls:active {
-  transform: scale(0.98);
-  filter: brightness(0.9);
-}
-
-.btn-group-dual {
-  display: flex;
-  gap: 10px;
-}
-
-.btn-group-dual .btn {
-  flex: 1;
-}
-
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: #e5e7eb;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.85rem;
-  padding: 10px 12px;
-}
-
-.btn-secondary:hover,
-.btn-secondary:active {
-  background: rgba(255, 255, 255, 0.15);
-  color: #ffffff;
-}
-
-/* Bottom Quick Share Card */
-.app-footer {
-  margin-top: 8px;
-}
-
-.footer-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px dashed rgba(255, 255, 255, 0.16);
-  border-radius: var(--radius-lg);
-  padding: 18px 16px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-info h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 4px;
-}
-
-.footer-info p {
-  font-size: 0.82rem;
-  color: var(--text-muted);
-}
-
-.btn-share-all {
-  border: none;
-  background: #ffffff;
-  color: #0f172a;
-  font-family: var(--font-family);
-  font-size: 0.9rem;
-  font-weight: 800;
-  padding: 11px 16px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: transform 0.2s;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-}
-
-.btn-share-all:active {
-  transform: scale(0.97);
-}
-
-.copyright-note {
-  text-align: center;
-  font-size: 0.72rem;
-  color: var(--text-dim);
-  margin-top: 14px;
-}
-
-/* Toast Message */
-.toast {
-  position: fixed;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%) translateY(100px);
-  background: #10b981;
-  color: #ffffff;
-  font-size: 0.88rem;
-  font-weight: 700;
-  padding: 10px 22px;
-  border-radius: var(--radius-full);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-  opacity: 0;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.06) 50%,
+    transparent 60%
+  );
+  animation: shimmer 3s ease-in-out infinite;
+  animation-delay: var(--delay);
   pointer-events: none;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index: 999;
 }
 
-.toast.show {
-  transform: translateX(-50%) translateY(0);
-  opacity: 1;
+@keyframes shimmer {
+  0%, 100% { left: -100%; }
+  50% { left: 100%; }
 }
 
-/* Small screen tweaks */
-@media (max-width: 360px) {
-  .card-title {
-    font-size: 1.35rem;
-  }
-  .time-num {
-    font-size: 1.1rem;
-  }
-  .btn {
-    font-size: 0.85rem;
-  }
+/* ── Boys Card ── */
+.card-boys {
+  background: linear-gradient(145deg, #0a1628 0%, #0f2847 50%, #0a1628 100%);
+  border: 1px solid rgba(0, 180, 255, 0.2);
+  box-shadow:
+    0 0 40px rgba(0, 140, 255, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Girls Card ── */
+.card-girls {
+  background: linear-gradient(145deg, #1a0a1e 0%, #2d0f3a 50%, #1a0a1e 100%);
+  border: 1px solid rgba(200, 50, 150, 0.2);
+  box-shadow:
+    0 0 40px rgba(200, 50, 150, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Logo ── */
+.logo {
+  height: 36px;
+  width: auto;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(0, 160, 255, 0.3));
+}
+
+/* ── Title (girls card) ── */
+.title-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+/* ── Badge ── */
+.badge {
+  display: inline-block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  padding: 5px 14px;
+  border-radius: 100px;
+  margin-bottom: 8px;
+}
+
+.badge.boys {
+  background: rgba(0, 180, 255, 0.12);
+  color: #4dc9ff;
+  border: 1px solid rgba(0, 180, 255, 0.25);
+}
+
+.badge.girls {
+  background: rgba(220, 60, 160, 0.12);
+  color: #f472b6;
+  border: 1px solid rgba(220, 60, 160, 0.25);
+}
+
+/* ── Audience ── */
+.audience {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* ── Divider ── */
+.divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 0 auto 16px;
+}
+
+/* ── Date ── */
+.date {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+/* ── Venue ── */
+.venue {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-weight: 600;
 }
