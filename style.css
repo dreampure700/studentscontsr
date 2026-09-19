@@ -157,3 +157,44 @@ body {
   color: rgba(255, 255, 255, 0.45);
   font-weight: 600;
 }
+
+/* ── Compact Timer ── */
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 10px 0 2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.t-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 36px;
+}
+
+.t-num {
+  font-family: 'Manrope', monospace, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.t-lbl {
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.3);
+  margin-top: 3px;
+}
+
+.t-sep {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.15);
+  margin-bottom: 10px;
+}
+
